@@ -7,4 +7,5 @@ git commit -m 'add tests' - додаємо коміт
 git push origin branch_name - відправляємо на сервер Branch
 git pull origin master - if on Master are new changes
 git status - show files that is not in git
+git checout -b 'branch name' - create branch and switch to this branch
 '''
