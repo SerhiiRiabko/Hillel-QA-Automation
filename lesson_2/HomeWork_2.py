@@ -4,4 +4,3 @@ Toshiba = [*Toshiba, *Eleks]
 Eleks =[]
 print(Toshiba)
 print(Eleks)
-
