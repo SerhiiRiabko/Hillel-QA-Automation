@@ -1,7 +1,7 @@
 eleks = ['Rudolf Emir', 'Octav Marango', 'Dominik Toreto', 'Jeccy Tailor', 'Whitny Hyston']
 toshiba = ['Akida Yamato', 'Yoshida Takad', 'Winhei Huan', 'Triseto Ariso', 'Ritero Naruto', 'Shibao Tikoo']
 toshiba.extend(eleks)
-eleks = []
+eleks.clear()
 
 print(toshiba)
 print(eleks)
