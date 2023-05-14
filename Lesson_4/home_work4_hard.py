@@ -30,7 +30,7 @@ html = '''
 </html>
 '''
 
-pattern = r'<div\s+id="(\w+)">\s*<a\s+href="(\S+)">\s*(\w+)\s*</a>'
+pattern = r'<div\s+id="(\w+)">\s*<a\s+href="(\S+)">\s*(\w+)\s*'
 
 matches = re.findall(pattern, html)
 
