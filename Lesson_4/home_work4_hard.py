@@ -1,6 +1,6 @@
 import re
 
-html_code = '''
+html = '''
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +32,7 @@ html_code = '''
 
 pattern = r'<div\s+id="(\w+)">\s*<a\s+href="(\S+)">\s*(\w+)\s*'
 
-matches = re.findall(pattern, html_code)
+matches = re.findall(pattern, html)
 
 results = [(match[0], match[1], match[2]) for match in matches]
 
