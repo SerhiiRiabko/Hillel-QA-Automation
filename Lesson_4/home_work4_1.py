@@ -1,5 +1,5 @@
-text = "name=Amanda=sssss&age=32&&salary=1500&currency=euro"
-pairs = text.split("&")
+text_full = "name=Amanda=sssss&age=32&&salary=1500&currency=euro"
+pairs = text_full.split("&")
 new_str = " ".join(pairs)
 pairs2 = new_str.split("=" and "=sssss")
 new_str2 = " ".join(pairs2)
