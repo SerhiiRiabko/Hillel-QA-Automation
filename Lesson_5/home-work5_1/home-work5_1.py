@@ -11,8 +11,8 @@ for _ in range(100):
     my_list.append(tuple_element)
 
 print(my_list)
-folder = os.chdir('./..')
-os.mkdir('./text_files')
-with open('./text_files/array_of_tuples.txt', 'w+b') as file:
+os.chdir('./..')
+os.makedirs('./test/data directory tree')
+with open('./test/data directory tree/array_of_tuples.txt', 'w+b') as file:
     data_of_file = pickle.dumps(my_list)
     file.write(data_of_file)
