@@ -5,7 +5,7 @@ from autoclass import Auto
 
 class Vag(Auto, ABC):
     def __init__(self, wheels, body, engine, engine_type, main_office_city, name, country):
-        super().__init__(wheels=wheels, body=body, engine=engine, engine_type=engine_type)
+        super().__init__(wheels=4, body='Metal', engine=engine, engine_type=engine_type)
         self.main_office_city = 'Wolfsburg'
         self.name = 'VAG'
         self.country = 'Germany'
