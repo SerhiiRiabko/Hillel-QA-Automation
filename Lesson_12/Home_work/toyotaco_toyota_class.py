@@ -23,3 +23,14 @@ class Toyota(Toyota_Co, ABC):
 
     def info_brand(self):
         print(f'Office of {self.brand} in {self.city_office}')
+
+    def refuel(self):
+        print(f'I need fuel')
+
+    def reliable(self):
+        print(f'No trouble to fix {self.brand}')
+
+
+if __name__ == '__main__':
+    toyota = Toyota()
+    toyota.info_brand()
