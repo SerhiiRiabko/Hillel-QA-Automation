@@ -10,7 +10,10 @@ class Company:
 
     @name.setter
     def name(self, value):
-        self._name = value
+        if isinstance(value, str) and len(value) > 0:
+            self._name = value
+        else:
+            raise ValueError("Length can't be empty or not String")
 
     @property
     def industry(self):
@@ -18,7 +21,10 @@ class Company:
 
     @industry.setter
     def industry(self, value):
-        self._industry = value
+        if isinstance(value, str) and len(value) > 0:
+            self._industry = value
+        else:
+            raise ValueError("Length can't be empty or not String")
 
     @property
     def location(self):
@@ -26,32 +32,37 @@ class Company:
 
     @location.setter
     def location(self, value):
-        self._location = value
+        if isinstance(value, str) and len(value) > 0:
+            self._location = value
+        else:
+            raise ValueError("Length can't be empty or not String")
 
     def get_company_info(self):
-        return f"Company: {self.name}, Industry: {self.industry}, Location: {self.location}"
+        return f"Company: {self._name}, Industry: {self._industry}, Location: {self._location}"
 
     @classmethod
     def create_company(cls, name, industry, location):
-        return cls(name, industry, location)
+        if name or industry or location is str:
+            return cls(name, industry, location)
+        else:
+            print('You have some mistakes')
 
     @staticmethod
     def print_static_info():
-        print("This is a static method in the Company class")
+        company_some = Company()
+        if company_some.create_company() is True:
+            print('You may add employees')
+        else:
+            print('Company is not created')
 
     @staticmethod
     def is_valid_company_name(name):
         return len(name) > 0
 
 
-company = Company("Apple", "Technology", "California")
-print(company.get_company_info())
-
-
-company2 = Company.create_company("Toshiba", "Technology", "Osaka")
-print(company2.get_company_info())
-
-Company.print_static_info()
-
-
-print(Company.is_valid_company_name("Apple"))
+if __name__ == '__main__':
+    company = Company("Apple", "Technology", "California")
+    print(company.get_company_info())
+    company2 = Company.create_company("Toshiba", "Technology", "Osaka")
+    print(company2.get_company_info())
+    print(Company.is_valid_company_name("Apple"))

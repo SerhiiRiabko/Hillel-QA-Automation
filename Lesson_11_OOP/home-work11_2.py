@@ -10,7 +10,10 @@ class Worker:
 
     @name.setter
     def name(self, value: str):
-        self._name = value
+        if self._name is True and len(self._name) > 0:
+            self._name = value
+        else:
+            print('Please the name. It can\'t be empty')
 
     @property
     def position(self) -> str:
@@ -18,7 +21,10 @@ class Worker:
 
     @position.setter
     def position(self, value: str):
-        self._position = value
+        if len(self._position) > 0:
+            self._position = value
+        else:
+            print('Position can\'t be empty')
 
     @property
     def salary(self) -> float:
@@ -26,7 +32,10 @@ class Worker:
 
     @salary.setter
     def salary(self, value: float):
-        self._salary = value
+        if self._salary > 0 and type(self.salary) is float:
+            self._salary = value
+        else:
+            print('Salary should be float and more than 0!!!')
 
     @classmethod
     def from_dict(cls, worker_dict):
