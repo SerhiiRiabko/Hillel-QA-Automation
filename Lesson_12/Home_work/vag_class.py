@@ -1,14 +1,14 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 from autoclass import Auto
 
 
-class Vag(Auto, ABC):
-    def __init__(self, wheels, body, engine, engine_type, main_office_city, name, country):
-        super().__init__(wheels=4, body='Metal', engine=engine, engine_type=engine_type)
-        self.main_office_city = 'Wolfsburg'
-        self.name = 'VAG'
-        self.country = 'Germany'
+class Vag(Auto):
+    def __init__(self):
+        super().__init__(wheels=4, body='Metal', engine= 'High Quality', engine_type='Turbo-Compressors')
+        self._main_office_city = 'Wolfsburg'
+        self._name = 'VAG'
+        self._country = 'Germany'
 
     @abstractmethod
     def work_long_without_crash(self):

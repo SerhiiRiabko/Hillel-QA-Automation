@@ -3,11 +3,9 @@ from abc import ABC
 from gm_class import Gm
 
 
-class Gms(Gm, ABC):
-    def __init__(self, wheels, body, engine, engine_type, main_office_city, name, country, brand,
-                 city_office, motto):
-        super().__init__(wheels=4, body='Metal', engine=engine, engine_type='fuel', main_office_city='Detroit',
-                         name='GM', country='USA')
+class Gmc(Gm, ABC):
+    def __init__(self):
+        super().__init__()
         self.brand = 'GMC'
         self.city_office = 'Detroit'
         self.motto = 'Everybody in'
@@ -15,7 +13,10 @@ class Gms(Gm, ABC):
     def work_long_without_crash(self):
         print(f'{self.brand} has a reliable engine and choir')
 
-    def hard_repair(self):
+    def refuel(self):
+        print('Please buy more petrol. I like 92!!!')
+
+    def simple_repair(self):
         print(f'Only some services can repair your car - {self.brand}')
 
     def ride(self):

@@ -1,13 +1,9 @@
-from abc import ABC
-
 from gm_class import Gm
 
 
-class Holden(Gm, ABC):
-    def __init__(self, wheels, body, engine, engine_type, main_office_city, name, country, brand,
-                 city_office, country_brand, motto):
-        super().__init__(wheels=4, body='Metal', engine=engine, engine_type='fuel', main_office_city='Detroit',
-                         name='GM', country='USA')
+class Holden(Gm):
+    def __init__(self):
+        super().__init__()
         self.brand = 'Holden'
         self.city_office = 'Melbourne'
         self.country_brand = 'Australia'
@@ -16,8 +12,8 @@ class Holden(Gm, ABC):
     def work_long_without_crash(self):
         print(f'{self.brand} has a reliable engine and choir')
 
-    def hard_repair(self):
-        print(f'Only some services can repair your car - {self.brand}')
+    def simple_repair(self):
+        print(f'Simple construction of {self.brand} helps anyone to repair it himself')
 
     def ride(self):
         print(f'Your ride will be nice with {self.brand}')
@@ -28,5 +24,14 @@ class Holden(Gm, ABC):
     def electricity_problem(self):
         print(f'{self.brand} has troubles wit electricity')
 
+    def refuel(self):
+        print('This car use 92 or 95 petrol')
+
     def info_brand(self):
         print(f'Office of {self.brand} in {self.city_office} - {self.country_brand}')
+
+
+if __name__ == '__main__':
+    holden = Holden()
+    holden.info_brand()
+    holden.simple_repair()
