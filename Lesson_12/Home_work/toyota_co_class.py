@@ -1,14 +1,14 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 from autoclass import Auto
 
 
-class Toyota_Co(Auto, ABC):
-    def __init__(self, wheels, body, engine, engine_type, main_office_city, name, country):
-        super().__init__(wheels=4, body='Metal', engine=engine, engine_type='fuel')
-        self.__main_office_city = 'Toyota(IT)'
-        self.__name = 'Toyota'
-        self.__country = 'Japan'
+class ToyotaCo(Auto):
+    def __init__(self):
+        super().__init__(wheels=4, body='Metal', engine='reliable', engine_type='fuel')
+        self._main_office_city = 'Toyota(IT)'
+        self._name = 'Toyota'
+        self._country = 'Japan'
 
     @abstractmethod
     def latest_developments(self):

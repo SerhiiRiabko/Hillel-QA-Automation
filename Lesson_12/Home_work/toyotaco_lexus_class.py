@@ -1,13 +1,9 @@
-from abc import ABC
-
-from toyota_co_class import Toyota_Co
+from toyota_co_class import ToyotaCo
 
 
-class Lexus(Toyota_Co, ABC):
-    def __init__(self, wheels, body, engine, engine_type, main_office_city, name, country, brand,
-                 city_office, motto):
-        super().__init__(wheels=4, body='Metal', engine=engine, engine_type='fuel', main_office_city='Toyota It',
-                         name='Toyota', country='Japan')
+class Lexus(ToyotaCo):
+    def __init__(self):
+        super().__init__()
         self.brand = 'Lexus'
         self.city_office = 'Nagoia'
         self.motto = 'The passionate of potential'
@@ -20,6 +16,14 @@ class Lexus(Toyota_Co, ABC):
 
     def say_motto(self):
         print(self.motto)
+        lexus = Lexus()
+        lexus.reliable()
 
     def info_brand(self):
         print(f'Office of {self.brand} in {self.city_office}')
+
+    def reliable(self):
+        print('You pay much but for a long time')
+
+    def refuel(self):
+        print(f'{self.brand} likes only good fuel')
