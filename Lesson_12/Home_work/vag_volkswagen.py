@@ -1,22 +1,23 @@
 from abc import ABC
 
-from gm_class import Gm
+from vag import Vag
 
 
-class Gmc(Gm, ABC):
+class Volkswagen(Vag, ABC):
     def __init__(self):
         super().__init__()
-        self.brand = 'GMC'
-        self.city_office = 'Detroit'
-        self.motto = 'Everybody in'
+        self.brand = 'Vw'
+        self.city_office = 'Wolfsburg'
+        self.motto = 'Das auto'
 
     def work_long_without_crash(self):
         print(f'{self.brand} has a reliable engine and choir')
 
     def refuel(self):
-        print('Please buy more petrol. I like 92!!!')
+        self.work_long_without_crash()
+        print('But I need fuel')
 
-    def simple_repair(self):
+    def hard_repair(self):
         print(f'Only some services can repair your car - {self.brand}')
 
     def ride(self):
@@ -25,8 +26,6 @@ class Gmc(Gm, ABC):
     def say_motto(self):
         print(self.motto)
 
-    def electricity_problem(self):
-        print(f'{self.brand} has troubles wit electricity')
-
     def info_brand(self):
+        self.say_motto()
         print(f'Office of {self.brand} in {self.city_office}')

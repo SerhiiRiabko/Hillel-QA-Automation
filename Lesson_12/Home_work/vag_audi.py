@@ -1,21 +1,21 @@
-from vag_class import Vag
+from vag import Vag
 
 
-class Porsche(Vag):
+class Audi(Vag):
     def __init__(self):
         super().__init__()
-        self._brand = 'Porsche'
-        self._city_office = 'Shtudgard'
-        self._motto = 'Time is priceless'
+        self._brand = 'Audi'
+        self._city_office = 'Ingolshtad'
+        self._motto = 'Advancement through technology'
 
     def work_long_without_crash(self):
-        print(f'{self._brand} has a power engines')
-
-    def refuel(self):
-        print('I use a good fuel for more power')
+        print(f'{self._brand} has a reliable engine and choir')
 
     def hard_repair(self):
-        print(f'Very expensive to repair - {self._brand}')
+        print(f'Difficult to repair - {self._brand}')
+
+    def refuel(self):
+        print('Good fuel - Good ride')
 
     def ride(self):
         print(f'Your ride will be nice with {self._brand}')

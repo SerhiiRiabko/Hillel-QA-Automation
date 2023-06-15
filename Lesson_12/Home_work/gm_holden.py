@@ -1,4 +1,4 @@
-from gm_class import Gm
+from general_motors import Gm
 
 
 class Holden(Gm):

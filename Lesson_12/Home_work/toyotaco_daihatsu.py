@@ -1,4 +1,4 @@
-from toyota_co_class import ToyotaCo
+from toyota_co import ToyotaCo
 
 
 class Daihatsu(ToyotaCo):
