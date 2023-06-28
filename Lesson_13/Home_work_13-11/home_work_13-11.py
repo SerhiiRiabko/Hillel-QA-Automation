@@ -6,7 +6,7 @@ from i_human import IHuman
 from i_walking import IWalking
 
 
-class Traveller(IHuman, IWalking, ABC):
+class Traveller(IHuman, IWalking, ABC): #inheritance
     def __init__(self):
         self._walk_status = False
         self.__walk_point_x = 0
@@ -14,7 +14,7 @@ class Traveller(IHuman, IWalking, ABC):
         self.finish = True
         self.__tired = 0
 
-    def walk(self, x: int, y: int):
+    def _walk(self, x: int, y: int):
         while self.__walk_point_x != x or self.__walk_point_y != y:
             if self.__walk_point_x != x:
                 self.__walk_point_x += 1
@@ -27,17 +27,19 @@ class Traveller(IHuman, IWalking, ABC):
 
     print('I am walking to EndPoint')
 
+    #encapsulation
     def traveling(self, x, y):
+        #
         start_time = time()
         self._walk_status = True
         self.__walk_point_x = 0
         self.__walk_point_y = 0
-        self.pack_things()
-        self.consider_road()
-        self.start_walk()
-        self.walk(x=x, y=y)
-        self.finish_walk()
-        self.un_pack_things()
+        self._pack_things()
+        self._consider_road()
+        self._start_walk()
+        self._walk(x=x, y=y)
+        self._finish_walk()
+        self._un_pack_things()
         self.reset_position()
         self.finish = True
         finish_time = time()
@@ -45,31 +47,32 @@ class Traveller(IHuman, IWalking, ABC):
         self.__tired += 35
 
     def reset_position(self):
+        # encapsulation
         self.__walk_point_x = 0
         self.__walk_point_y = 0
 
-    def start_walk(self):
+    def _start_walk(self):
         self._walk_status = True
         print('I start my travel')
 
-    def finish_walk(self):
+    def _finish_walk(self):
         self._walk_status = False
         self.finish = True
         print('I have finished my travel')
 
-    def pack_things(self):
+    def _pack_things(self):
         self._walk_status = False
-        self.__walk_point_x = 0
-        self.__walk_point_y = 0
+        self.__walk_point_x = 0 #encapsulation
+        self.__walk_point_y = 0 #encapsulation
         print('I am packing my things')
 
-    def consider_road(self):
+    def _consider_road(self):
         self._walk_status = False
         self.__walk_point_x = 0
         self.__walk_point_y = 0
         print('I am planning my travel')
 
-    def un_pack_things(self):
+    def _un_pack_things(self):
         self._walk_status = False
         print('I am unpacking my things!')
 

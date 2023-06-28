@@ -4,13 +4,13 @@ from abc import ABC, abstractmethod
 class IWalking(ABC):
 
     @abstractmethod
-    def walk(self):
+    def _walk(self):
         pass
 
     @abstractmethod
-    def start_walk(self, x:int, y:int):
+    def _start_walk(self, x:int, y:int):
         pass
 
     @abstractmethod
-    def finish_walk(self):
+    def _finish_walk(self):
         pass
