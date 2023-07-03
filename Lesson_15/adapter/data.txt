@@ -1,0 +1,5 @@
+first_name, last_name, age, gender, salary
+Serhii, Ria, 36, male, 10000
+Nastiia, Zai, 30, female, 8000
+Ariana, Ria, 16, female, 16000
+Amalia, Ria 14, female, 16000
